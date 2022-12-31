@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Ticket Booking</title>
+        <style>
+            body {
+              background-image: "images/ticket_bg.jpeg";
+            }
+        </style>
+        <link rel = "icon" href = 
+        "images/F1_logo.png" 
+                type = "image/x-icon">
+        <h1>F1 Ticket Booking</h1>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <link rel="stylesheet" href="ticket.css">
+    </head>
+    <body background="images/ticket_bg.jpeg">   
+        <form action="reservation.php" method="post">
+            <div class="elem-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="visitor_name" placeholder="Name" pattern=[A-Z\sa-z]{3,20} required>
+            </div>
+            <div class="elem-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="visitor_email" placeholder="Email" required>
+            </div>
+            <div class="elem-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="visitor_phone" placeholder="Enter Phone Number" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+            </div>
+            <hr>
+            <div class="elem-group inlined">
+              <label for="adult">Adults</label>
+              <input type="number" id="adult" name="total_adults" placeholder="1" min="1" required>
+            </div>
+            <div class="elem-group inlined">
+              <label for="child">Children</label>
+              <input type="number" id="child" name="total_children" placeholder="0" min="0" required>
+            </div>
+            <div class="elem-group">
+              <label for="room-selection">Select Race Ticket</label>
+              <select id="room-selection" name="room_preference" required>
+                  <option value="">--Choose Race--</option>
+                  <option value="connecting">GULF AIR BAHRAIN GRAND PRIX</option>
+                  <option value="adjoining">STC SAUDI ARABIAN GRAND PRIX</option>
+                  <option value="adjacent">CRYPTO.COM MIAMI GRAND PRIX</option>
+                  <option value="adjacent">GRAN PREMIO DEL MADE IN ITALY E DELL'EMILIA-ROMAGNA</option>
+                  <option value="adjacent">GRAND PRIX DE MONACO</option>
+                  <option value="adjacent">ARAMCO BRITISH GRAND PRIX</option>
+              </select>
+            </div>
+            <hr>
+            <div class="elem-group">
+              <label for="message">Medical Conditions?</label>
+              <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+            </div>
+            <button type="submit">Inject Adrenaline</button>
+          </form>
+    </body>
+</html>
